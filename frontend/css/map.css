@@ -1,19 +1,10 @@
-
 /* =========================================================
    STRAYCARE GOA — MAP PAGE
-   Used only by map.html
-   ========================================================= */
-
-
-/* =========================================================
-   PAGE
    ========================================================= */
 
 .map-page {
   min-height: calc(100vh - 60px);
-
   padding: 28px 0 55px;
-
   background:
     radial-gradient(
       circle at 95% 5%,
@@ -30,17 +21,11 @@
 
 .map-top-card {
   background: #ffffff;
-
   border: 1px solid #e1ebe5;
-
   border-radius: 18px;
-
   padding: 24px 27px 19px;
-
   margin-bottom: 16px;
-
-  box-shadow:
-    0 6px 22px rgba(41, 92, 61, 0.06);
+  box-shadow: 0 6px 22px rgba(41, 92, 61, 0.06);
 }
 
 
@@ -50,117 +35,81 @@
 
 .map-header {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 20px;
-
   flex-wrap: wrap;
 }
 
 
 /* =========================================================
-   TITLE AREA
+   TITLE
    ========================================================= */
 
 .map-title-area {
   display: flex;
-
   align-items: center;
-
   gap: 13px;
 }
 
 .map-title-icon {
   width: 48px;
   height: 48px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
-
   border-radius: 13px;
-
   background: var(--color-primary-light);
-
   font-size: 23px;
 }
 
 .page-label {
   display: block;
-
   margin-bottom: 2px;
-
   color: var(--color-primary);
-
   font-size: 0.68rem;
-
   font-weight: 750;
-
   letter-spacing: 1px;
 }
 
 .map-header h1 {
   margin: 0 0 3px;
-
   color: #293a31;
-
   font-size: 1.5rem;
-
   line-height: 1.2;
 }
 
 .map-header p {
   margin: 0;
-
   color: var(--color-muted);
-
   font-size: 0.82rem;
 }
 
 
 /* =========================================================
-   MAP TOGGLE
+   TOGGLE
    ========================================================= */
 
 .map-toggle {
   display: flex;
-
   gap: 6px;
-
   padding: 4px;
-
   border-radius: 11px;
-
   background: #f2f7f4;
-
   border: 1px solid #e1ebe5;
 }
 
 .map-toggle button {
   min-height: 37px;
-
   padding: 7px 13px;
-
   border: 1px solid transparent;
-
   border-radius: 8px;
-
   background: transparent;
-
   color: #65736b;
-
   font-size: 0.82rem;
-
   font-weight: 650;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -170,72 +119,51 @@
 
 .map-toggle button:hover {
   background: #ffffff;
-
   color: var(--color-primary);
 }
 
 .map-toggle button.active-toggle {
   background: var(--color-primary);
-
   color: #ffffff;
-
   border-color: var(--color-primary);
-
-  box-shadow:
-    0 3px 9px rgba(54, 162, 105, 0.18);
+  box-shadow: 0 3px 9px rgba(54, 162, 105, 0.18);
 }
 
 .map-toggle button.active-toggle:hover {
   background: var(--color-primary-dark);
-
   color: white;
-
   transform: translateY(-1px);
 }
 
 
 /* =========================================================
-   MAP LEGEND
+   LEGEND
    ========================================================= */
 
 .map-legend {
   display: flex;
-
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 17px;
-
   margin-top: 20px;
-
   padding-top: 15px;
-
   border-top: 1px solid #edf2ee;
-
   color: #68766e;
-
   font-size: 0.77rem;
 }
 
 .legend-item {
   display: flex;
-
   align-items: center;
-
   gap: 6px;
 }
 
 .legend-dot {
   width: 10px;
   height: 10px;
-
   display: inline-block;
-
   border-radius: 50%;
-
-  box-shadow:
-    0 0 0 3px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
 }
 
 .stray-dot {
@@ -248,102 +176,102 @@
 
 .legend-update {
   display: flex;
-
   align-items: center;
-
   gap: 6px;
-
   margin-left: auto;
-
   color: #89968f;
 }
 
 .live-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--color-primary);
-
-  box-shadow:
-    0 0 0 4px rgba(54, 162, 105, 0.10);
+  box-shadow: 0 0 0 4px rgba(54, 162, 105, 0.10);
 }
 
 
 /* =========================================================
-   MAP CONTAINER
+   MAP
    ========================================================= */
 
 .map-container-card {
+  position: relative;
   padding: 7px;
-
   background: #ffffff;
-
   border: 1px solid #e1ebe5;
-
   border-radius: 18px;
-
-  box-shadow:
-    0 8px 28px rgba(41, 92, 61, 0.08);
-
+  box-shadow: 0 8px 28px rgba(41, 92, 61, 0.08);
   overflow: hidden;
+}
+
+#maptoolkit-attribution {
+  position: absolute;
+  z-index: 1000;
+  left: 14px;
+  bottom: 14px;
+  height: 24px;
+}
+
+#maptoolkit-attribution img {
+  display: block;
+  width: auto;
+  height: 100%;
 }
 
 .map-box {
   width: 100%;
-
   height: 550px;
-
+  min-height: 550px;
   margin: 0;
-
   border-radius: 13px;
-
   overflow: hidden;
-
   background: #eaf2ec;
+}
+
+.map-load-error {
+  display: grid;
+  min-height: 100%;
+  margin: 0;
+  padding: 24px;
+  place-items: center;
+  color: #65736b;
+  text-align: center;
 }
 
 
 /* =========================================================
-   LEAFLET CUSTOMIZATION
+   LEAFLET
    ========================================================= */
 
-.leaflet-container {
-  font-family:
-    'Segoe UI',
-    Roboto,
-    Arial,
-    sans-serif;
+/* =========================================================
+   MAP PIN (custom marker, no plugin)
+   ========================================================= */
 
-  background: #eaf2ec;
+.map-pin-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 
-/* Zoom controls */
+/* =========================================================
+   MAPLIBRE CONTROLS
+   ========================================================= */
 
-.leaflet-control-zoom {
+.maplibregl-ctrl-group {
   border: none !important;
-
-  box-shadow:
-    0 4px 13px rgba(40, 70, 50, 0.13) !important;
+  box-shadow: 0 4px 13px rgba(40, 70, 50, 0.13) !important;
 }
 
-.leaflet-control-zoom a {
-  color: #496157 !important;
-
+.maplibregl-ctrl-group button {
   background: rgba(255, 255, 255, 0.96) !important;
-
-  border: none !important;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
 }
 
-.leaflet-control-zoom a:hover {
-  color: var(--color-primary) !important;
-
+.maplibregl-ctrl-group button:hover {
   background: #f1faf4 !important;
 }
 
@@ -354,58 +282,39 @@
 
 #pin-details {
   margin-top: 16px;
-
   padding: 20px 22px;
-
   border-radius: 15px;
-
   border: 1px solid #e0ebe4;
-
   background: #ffffff;
-
-  box-shadow:
-    0 6px 20px rgba(41, 92, 61, 0.07);
-
-  animation:
-    detailsAppear 0.25s ease;
+  box-shadow: 0 6px 20px rgba(41, 92, 61, 0.07);
+  animation: detailsAppear 0.25s ease;
 }
 
 @keyframes detailsAppear {
-
   from {
     opacity: 0;
-
     transform: translateY(6px);
   }
 
   to {
     opacity: 1;
-
     transform: translateY(0);
   }
-
 }
 
 
 /* =========================================================
-   MAP INFORMATION NOTE
+   INFORMATION
    ========================================================= */
 
 .map-info {
   display: flex;
-
   align-items: center;
-
   gap: 8px;
-
   margin-top: 12px;
-
   padding: 10px 13px;
-
   border-radius: 9px;
-
   background: #eef8f1;
-
   border: 1px solid #dcefe3;
 }
 
@@ -415,44 +324,12 @@
 
 .map-info p {
   margin: 0;
-
   color: #748078;
-
   font-size: 0.75rem;
 }
 
 
-/* =========================================================
-   STATUS COLORS
-   ========================================================= */
 
-
-
-
-/* =========================================================
-   LEAFLET POPUP
-   ========================================================= */
-
-.leaflet-popup-content-wrapper {
-  border-radius: 12px;
-
-  box-shadow:
-    0 8px 25px rgba(30, 60, 40, 0.14);
-}
-
-.leaflet-popup-content {
-  margin: 13px 15px;
-
-  color: #33443b;
-
-  font-size: 0.84rem;
-
-  line-height: 1.5;
-}
-
-.leaflet-popup-tip {
-  box-shadow: none;
-}
 
 
 /* =========================================================
@@ -467,13 +344,11 @@
 
   .map-top-card {
     padding: 20px;
-
     border-radius: 15px;
   }
 
   .map-header {
     align-items: flex-start;
-
     flex-direction: column;
   }
 
@@ -495,19 +370,17 @@
 
   .legend-update {
     width: 100%;
-
     margin-left: 0;
   }
 
   .map-container-card {
     padding: 5px;
-
     border-radius: 14px;
   }
 
   .map-box {
     height: 470px;
-
+    min-height: 470px;
     border-radius: 10px;
   }
 }
@@ -530,13 +403,11 @@
   .map-title-icon {
     width: 43px;
     height: 43px;
-
     font-size: 20px;
   }
 
   .map-toggle button {
     padding: 7px 8px;
-
     font-size: 0.75rem;
   }
 
@@ -546,5 +417,6 @@
 
   .map-box {
     height: 420px;
+    min-height: 420px;
   }
 }

@@ -11,13 +11,8 @@
   <title>Map & Heatmap | StrayCare Goa</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.css">
   <link rel="stylesheet" href="css/map.css">
-
-  <!-- Leaflet -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  >
 </head>
 
 
@@ -127,11 +122,10 @@
            ================================================= -->
 
       <section class="map-container-card">
-
-        <div
-          id="map"
-          class="map-box"
-        ></div>
+        <div id="map" class="map-box"></div>
+        <a id="maptoolkit-attribution" href="https://www.maptoolkit.org/" target="_blank" rel="noopener noreferrer" aria-label="Map tiles by Maptoolkit">
+          <img src="https://www.maptoolkit.org/assets/maptoolkit-attribution.png" alt="Maptoolkit">
+        </a>
 
       </section>
 
@@ -166,23 +160,46 @@
   </main>
 
 
-  <!-- Leaflet core -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  ></script>
-
-  <!-- Leaflet Heat -->
-  <script
-    src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"
-  ></script>
-
-
-  <!-- App scripts -->
+  <!-- App helpers must be available before map.js. -->
   <script src="js/api.js"></script>
   <script src="js/nav.js"></script>
-  <script src="js/map.js"></script>
+  <script>
+    // Try a second CDN if the primary MapLibre host is unavailable. Load the
+    // library, THEN map.js, so map.js never runs before maplibregl exists.
+    function loadScript(sources, onReady) {
+      const [source, ...fallbacks] = sources;
+      const script = document.createElement('script');
+      script.src = source;
+      script.onload = onReady;
+      script.onerror = () => {
+        if (fallbacks.length) {
+          loadScript(fallbacks, onReady);
+        } else {
+          document.getElementById('map').innerHTML =
+            '<p class="map-load-error">The map library could not be loaded. Check your internet connection and refresh.</p>';
+          console.error('MapLibre GL could not be loaded from either CDN.');
+        }
+      };
+      document.body.appendChild(script);
+    }
+
+    function loadApp() {
+      const app = document.createElement('script');
+      app.src = 'js/map.js?v=5';
+      app.onerror = () => {
+        document.getElementById('map').innerHTML =
+          '<p class="map-load-error">The map could not be loaded. Check your internet connection and refresh.</p>';
+        console.error('map.js failed to load.');
+      };
+      document.body.appendChild(app);
+    }
+
+    loadScript([
+      'https://cdn.jsdelivr.net/npm/maplibre-gl@5.24.0/dist/maplibre-gl.js',
+      'https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js'
+    ], loadApp);
+  </script>
 
 </body>
 
 </html>
-
