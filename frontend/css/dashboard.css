@@ -1,0 +1,286 @@
+/* dashboard.css — ONLY used by dashboard.html */
+
+/* =========================
+   DASHBOARD HEADER
+   ========================= */
+
+.container {
+  padding-top: 32px;
+  padding-bottom: 50px;
+}
+
+.container > h2:first-child {
+  font-size: 1.9rem;
+  margin-bottom: 24px;
+  color: var(--color-primary-dark);
+  font-weight: 750;
+}
+
+
+/* =========================
+   STATISTICS GRID
+   ========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  margin-bottom: 38px;
+}
+
+
+/* =========================
+   STAT CARDS
+   ========================= */
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+
+  padding: 22px 18px;
+  text-align: center;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: var(--color-primary);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   STAT NUMBER
+   ========================= */
+
+.stat-number {
+  font-size: 2.15rem;
+  font-weight: 800;
+  line-height: 1.2;
+
+  color: var(--color-primary-dark);
+
+  margin-bottom: 6px;
+}
+
+
+/* =========================
+   STAT LABEL
+   ========================= */
+
+.stat-label {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+
+/* =========================
+   RECENT REPORTS SECTION
+   ========================= */
+
+.container > h2:not(:first-child) {
+  font-size: 1.45rem;
+  color: #26352f;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   RECENT REPORT ITEM
+   ========================= */
+
+.recent-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+
+  padding: 14px 16px;
+  margin-bottom: 12px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recent-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   REPORT IMAGE
+   ========================= */
+
+.recent-item img {
+  width: 72px;
+  height: 72px;
+
+  object-fit: cover;
+  border-radius: 12px;
+
+  flex-shrink: 0;
+
+  background: #eef4f0;
+}
+
+
+/* =========================
+   REPORT INFORMATION
+   ========================= */
+
+.recent-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.recent-info h3,
+.recent-info h4 {
+  margin: 0 0 5px;
+  color: #26352f;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.recent-info p {
+  margin: 3px 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+
+/* =========================
+   STATUS / SMALL TEXT
+   ========================= */
+
+.recent-info .status {
+  display: inline-block;
+
+  padding: 5px 10px;
+  margin-top: 6px;
+
+  border-radius: 999px;
+
+  background: #fff3df;
+  color: #b96b00;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
+#recent-list:empty::before {
+  content: "No unresolved reports at the moment.";
+
+  display: block;
+
+  padding: 28px;
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px dashed #d7dfda;
+  border-radius: 16px;
+
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .container {
+    padding-top: 24px;
+  }
+
+  .container > h2:first-child {
+    font-size: 1.55rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 18px 10px;
+    border-radius: 15px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+
+  .container > h2:not(:first-child) {
+    font-size: 1.25rem;
+  }
+
+  .recent-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .recent-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recent-item {
+    align-items: flex-start;
+  }
+
+  .recent-item img {
+    width: 55px;
+    height: 55px;
+  }
+}

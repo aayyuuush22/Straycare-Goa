@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Community Feed | StrayCare Goa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feed.css">
+</head>
+
+<body>
+
+  <div id="nav-container"></div>
+
+  <main class="feed-page">
+
+    <!-- Page Header -->
+    <section class="feed-hero">
+      <div class="feed-hero-icon">🐾</div>
+
+      <div>
+        <span class="feed-eyebrow">STRAYCARE GOA</span>
+        <h1>Community Feed</h1>
+        <p>
+          Share moments, help animals, and keep the Goa pet community connected.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Create Post -->
+    <section class="card feed-create-card">
+
+      <div class="section-heading">
+        <div class="section-icon">📸</div>
+
+        <div>
+          <h2>Share a post</h2>
+          <p>Share a photo or update with the community.</p>
+        </div>
+      </div>
+
+      <form id="post-form">
+
+        <div class="form-group">
+          <label for="post-image">Photo</label>
+
+          <label for="post-image" class="file-upload-box">
+            <span class="upload-icon">📷</span>
+            <span>
+              <strong>Choose a photo</strong>
+              <small>JPG, PNG or other image formats</small>
+            </span>
+          </label>
+
+          <input
+            type="file"
+            id="post-image"
+            accept="image/*"
+            required
+            class="file-input"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="post-caption">Caption</label>
+
+          <textarea
+            id="post-caption"
+            rows="3"
+            placeholder="What's happening? Share something with the community..."
+          ></textarea>
+        </div>
+
+        <div class="form-submit-row">
+          <span class="form-helper">🐶 Help spread awareness and kindness.</span>
+
+          <button type="submit" class="btn post-submit-btn">
+            Post <span>→</span>
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+
+    <!-- Report Animal -->
+    <section class="card report-card">
+
+      <div class="report-header">
+
+        <div class="report-icon">🚨</div>
+
+        <div>
+          <span class="report-label">QUICK ACTION</span>
+          <h2>Report a stray animal / rabies case</h2>
+          <p>
+            Help NGOs identify animals that may need immediate assistance.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="report-notice">
+        <span>📍</span>
+        <p>
+          Your report will appear on the <strong>Map &amp; Heatmap</strong>
+          page so NGOs can locate and respond to it.
+        </p>
+      </div>
+
+
+      <form id="report-form">
+
+        <div class="report-form-grid">
+
+          <!-- Photo -->
+          <div class="form-group">
+            <label for="report-image">Photo</label>
+
+            <label for="report-image" class="file-upload-box report-upload">
+              <span class="upload-icon">📷</span>
+              <span>
+                <strong>Add report photo</strong>
+                <small>Photo helps NGOs identify the case</small>
+              </span>
+            </label>
+
+            <input
+              type="file"
+              id="report-image"
+              accept="image/*"
+              required
+              class="file-input"
+            >
+          </div>
+
+
+          <!-- Type -->
+          <div class="form-group">
+            <label for="report-type">Type</label>
+
+            <div class="select-wrapper">
+              <select id="report-type">
+                <option value="stray">🐕 Stray animal needing help</option>
+                <option value="rabies">⚠️ Suspected rabies case</option>
+              </select>
+            </div>
+          </div>
+
+
+          <!-- Location -->
+          <div class="form-group report-location-group">
+
+            <label>Location</label>
+
+            <button
+              type="button"
+              id="pin-location-btn"
+              class="location-btn"
+            >
+              📍 Use my current location
+            </button>
+
+            <p id="location-status" class="location-status">
+              No location pinned yet.
+            </p>
+
+          </div>
+
+
+          <!-- Description -->
+          <div class="form-group report-description-group">
+
+            <label for="report-description">Description</label>
+
+            <textarea
+              id="report-description"
+              rows="3"
+              placeholder="Any details that help — injury, behavior, landmark, etc."
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <div class="report-submit-row">
+
+          <p class="report-tip">
+            💡 Include as much useful information as possible.
+          </p>
+
+          <button type="submit" class="btn btn-accent report-submit-btn">
+            Submit Report <span>→</span>
+          </button>
+
+        </div>
+
+        <p id="report-error" class="error-text hidden"></p>
+
+      </form>
+
+    </section>
+
+
+    <!-- Latest Posts -->
+    <section class="posts-section">
+
+      <div class="posts-section-header">
+
+        <div>
+          <span class="feed-eyebrow">COMMUNITY</span>
+          <h2>Latest Posts</h2>
+        </div>
+
+        <div class="community-badge">
+          🐾 Community Updates
+        </div>
+
+      </div>
+
+      <div id="posts-list"></div>
+
+    </section>
+
+  </main>
+
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/feed.js"></script>
+
+</body>
+</html>

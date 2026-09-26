@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Map & Heatmap | StrayCare Goa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/map.css">
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-container"></div>
+
+
+  <main class="map-page">
+
+    <div class="container">
+
+      <!-- =================================================
+           MAP HEADER
+           ================================================= -->
+
+      <section class="map-top-card">
+
+        <div class="map-header">
+
+          <div class="map-title-area">
+
+            <div class="map-title-icon">
+              🗺️
+            </div>
+
+            <div>
+
+              <span class="page-label">
+                STRAYCARE GOA
+              </span>
+
+              <h1>Map & Heatmap</h1>
+
+              <p>
+                Explore stray animal reports and reported rabies
+                cases across Goa.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- View Toggle -->
+
+          <div class="map-toggle">
+
+            <button
+              id="view-markers-btn"
+              class="btn-small active-toggle"
+              type="button"
+            >
+              📍 Pin View
+            </button>
+
+            <button
+              id="view-heatmap-btn"
+              class="btn-small"
+              type="button"
+            >
+              🔥 Heatmap
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LEGEND
+             ================================================= -->
+
+        <div class="map-legend">
+
+          <div class="legend-item">
+            <span
+              class="legend-dot stray-dot"
+            ></span>
+
+            <span>Stray animal reports</span>
+          </div>
+
+
+          <div class="legend-item">
+            <span
+              class="legend-dot rabies-dot"
+            ></span>
+
+            <span>Rabies cases</span>
+          </div>
+
+
+          <div class="legend-update">
+            <span class="live-dot"></span>
+            Updates automatically
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           MAP
+           ================================================= -->
+
+      <section class="map-container-card">
+
+        <div
+          id="map"
+          class="map-box"
+        ></div>
+
+      </section>
+
+
+      <!-- =================================================
+           PIN DETAILS
+           ================================================= -->
+
+      <div
+        id="pin-details"
+        class="card hidden"
+      ></div>
+
+
+      <!-- Small information note -->
+
+      <div class="map-info">
+
+        <span class="info-icon">
+          ℹ️
+        </span>
+
+        <p>
+          Select a marker on the map to view more information
+          about that report.
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Leaflet core -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+  <!-- Leaflet Heat -->
+  <script
+    src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"
+  ></script>
+
+
+  <!-- App scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
+
+</html>
+

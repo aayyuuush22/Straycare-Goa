@@ -1,0 +1,962 @@
+/* =========================================================
+   STRAYCARE GOA — COMMUNITY FEED
+   Only used by feed.html
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE
+   --------------------------------------------------------- */
+
+.feed-page {
+  width: min(1050px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 60px;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.feed-hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 24px;
+  padding: 28px 30px;
+
+  background:
+    radial-gradient(circle at 90% 20%, rgba(255, 173, 74, 0.16), transparent 28%),
+    linear-gradient(135deg, #eaf8ef, #f8fcf9);
+
+  border: 1px solid #dceee3;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 24px rgba(39, 128, 82, 0.07);
+}
+
+.feed-hero-icon {
+  width: 62px;
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  font-size: 30px;
+
+  box-shadow: 0 6px 18px rgba(39, 128, 82, 0.10);
+}
+
+.feed-eyebrow {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-primary-dark);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.feed-hero h1 {
+  margin: 0 0 5px;
+
+  color: var(--color-text);
+
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.feed-hero p {
+  margin: 0;
+
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+
+/* ---------------------------------------------------------
+   CREATE POST CARD
+   --------------------------------------------------------- */
+
+.feed-create-card {
+  padding: 26px 28px;
+  margin-bottom: 22px;
+
+  border-radius: 18px;
+  border: 1px solid var(--color-border);
+
+  box-shadow: 0 8px 24px rgba(38, 53, 45, 0.06);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 22px;
+}
+
+.section-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: var(--color-primary-light);
+  border-radius: 13px;
+
+  font-size: 22px;
+}
+
+.section-heading h2 {
+  margin: 0 0 3px;
+
+  font-size: 1.25rem;
+}
+
+.section-heading p {
+  margin: 0;
+
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+   --------------------------------------------------------- */
+
+.feed-page .form-group {
+  margin-bottom: 18px;
+}
+
+.feed-page .form-group label:not(.file-upload-box) {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-text);
+
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.feed-page textarea,
+.feed-page select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+
+  background: #ffffff;
+  color: var(--color-text);
+
+  font-family: inherit;
+  font-size: 0.92rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feed-page textarea {
+  padding: 12px 13px;
+  resize: vertical;
+  min-height: 82px;
+}
+
+.feed-page textarea:focus,
+.feed-page select:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(54, 162, 105, 0.10);
+}
+
+.feed-page textarea::placeholder {
+  color: #9aa9a1;
+}
+
+
+/* ---------------------------------------------------------
+   FILE UPLOAD
+   --------------------------------------------------------- */
+
+.file-input {
+  display: none;
+}
+
+.file-upload-box {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 13px 15px;
+
+  box-sizing: border-box;
+
+  background: #f8fcf9;
+
+  border: 1.5px dashed #bfdacc;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.file-upload-box:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+}
+
+.file-upload-box:active {
+  transform: scale(0.995);
+}
+
+.upload-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+  border-radius: 11px;
+
+  font-size: 20px;
+
+  box-shadow: 0 3px 10px rgba(38, 53, 45, 0.06);
+}
+
+.file-upload-box strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--color-text);
+  font-size: 0.88rem;
+}
+
+.file-upload-box small {
+  display: block;
+
+  color: var(--color-muted);
+  font-size: 0.76rem;
+}
+
+
+/* ---------------------------------------------------------
+   POST SUBMIT
+   --------------------------------------------------------- */
+
+.form-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: 6px;
+}
+
+.form-helper {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.post-submit-btn {
+  min-width: 120px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.post-submit-btn span,
+.report-submit-btn span {
+  transition: transform 0.2s ease;
+}
+
+.post-submit-btn:hover span,
+.report-submit-btn:hover span {
+  transform: translateX(3px);
+}
+
+
+/* ---------------------------------------------------------
+   REPORT CARD
+   --------------------------------------------------------- */
+
+.report-card {
+  padding: 26px 28px;
+  margin-bottom: 34px;
+
+  border-radius: 18px;
+
+  border: 1px solid #f1dfc9;
+  border-left: 5px solid var(--color-accent);
+
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 173, 74, 0.10), transparent 30%),
+    #ffffff;
+
+  box-shadow: 0 8px 24px rgba(38, 53, 45, 0.06);
+}
+
+.report-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+.report-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: var(--color-accent-light);
+  border-radius: 13px;
+
+  font-size: 22px;
+}
+
+.report-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #d98222;
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.report-header h2 {
+  margin: 0 0 4px;
+
+  color: var(--color-text);
+
+  font-size: 1.2rem;
+}
+
+.report-header p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.86rem;
+}
+
+
+/* ---------------------------------------------------------
+   REPORT NOTICE
+   --------------------------------------------------------- */
+
+.report-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin-bottom: 22px;
+  padding: 12px 14px;
+
+  background: #fff8ee;
+
+  border: 1px solid #f6e5cc;
+  border-radius: 11px;
+}
+
+.report-notice > span {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.report-notice p {
+  margin: 0;
+
+  color: #735a3d;
+
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   REPORT FORM GRID
+   --------------------------------------------------------- */
+
+.report-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 22px;
+}
+
+.report-form-grid .form-group {
+  min-width: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SELECT
+   --------------------------------------------------------- */
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "⌄";
+
+  position: absolute;
+  right: 13px;
+  top: 50%;
+
+  transform: translateY(-55%);
+
+  color: var(--color-muted);
+
+  pointer-events: none;
+}
+
+.feed-page select {
+  height: 47px;
+
+  padding: 0 38px 0 13px;
+
+  appearance: none;
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   LOCATION
+   --------------------------------------------------------- */
+
+.location-btn {
+  width: 100%;
+  min-height: 47px;
+
+  border: 1px solid var(--color-primary);
+  border-radius: 11px;
+
+  background: var(--color-primary);
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.location-btn:hover {
+  background: var(--color-primary-dark);
+
+  box-shadow: 0 5px 14px rgba(54, 162, 105, 0.18);
+}
+
+.location-btn:active {
+  transform: scale(0.99);
+}
+
+.location-status {
+  margin: 7px 0 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.76rem;
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
+
+.report-description-group {
+  grid-column: 1 / -1;
+}
+
+.report-description-group textarea {
+  min-height: 90px;
+}
+
+
+/* ---------------------------------------------------------
+   REPORT SUBMIT
+   --------------------------------------------------------- */
+
+.report-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-top: 4px;
+}
+
+.report-tip {
+  margin: 0;
+
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+
+.report-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-width: 155px;
+}
+
+
+/* ---------------------------------------------------------
+   POSTS SECTION
+   --------------------------------------------------------- */
+
+.posts-section {
+  margin-top: 8px;
+}
+
+.posts-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 16px;
+}
+
+.posts-section-header h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.4rem;
+}
+
+.community-badge {
+  padding: 7px 12px;
+
+  background: var(--color-primary-light);
+
+  color: var(--color-primary-dark);
+
+  border: 1px solid #d7eee0;
+  border-radius: 20px;
+
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   POST CARDS
+   These classes are generated/used by feed.js
+   --------------------------------------------------------- */
+
+#posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.post-card {
+  padding: 0;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+
+  box-shadow: 0 7px 22px rgba(38, 53, 45, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(38, 53, 45, 0.09);
+}
+
+.post-card img {
+  width: 100%;
+  max-height: 460px;
+
+  object-fit: cover;
+  display: block;
+
+  background: #f1f6f3;
+}
+
+.post-body {
+  padding: 16px 18px 17px;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 7px;
+
+  color: var(--color-text);
+
+  font-weight: 700;
+}
+
+.post-caption {
+  margin: 6px 0 14px;
+
+  color: #46554d;
+
+  line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   POST ACTIONS
+   --------------------------------------------------------- */
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 13px;
+}
+
+.post-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 34px;
+
+  padding: 6px 12px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.post-actions button:hover {
+  background: var(--color-primary-light);
+  border-color: #b9ddc7;
+}
+
+.post-actions button:active {
+  transform: scale(0.97);
+}
+
+.post-actions button.liked {
+  background: #fff0dc;
+  border-color: var(--color-accent);
+  color: #bd6e16;
+}
+
+
+/* ---------------------------------------------------------
+   COMMENTS
+   --------------------------------------------------------- */
+
+.comment-list {
+  padding-top: 12px;
+
+  border-top: 1px solid #edf1ee;
+}
+
+.comment-item {
+  margin-bottom: 8px;
+
+  padding: 7px 10px;
+
+  background: #f8faf9;
+
+  border-radius: 8px;
+
+  color: #526159;
+
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.comment-item:last-child {
+  margin-bottom: 0;
+}
+
+.comment-item b {
+  margin-right: 6px;
+
+  color: var(--color-text);
+}
+
+
+/* ---------------------------------------------------------
+   COMMENT INPUT
+   --------------------------------------------------------- */
+
+.comment-input-row {
+  display: flex;
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.comment-input-row input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 9px 11px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+
+  color: var(--color-text);
+
+  font-family: inherit;
+  font-size: 0.84rem;
+
+  outline: none;
+}
+
+.comment-input-row input:focus {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px rgba(54, 162, 105, 0.09);
+}
+
+.comment-input-row input::placeholder {
+  color: #9aa9a1;
+}
+
+
+/* ---------------------------------------------------------
+   ERROR
+   --------------------------------------------------------- */
+
+.feed-page .error-text {
+  margin: 10px 0 0;
+
+  padding: 9px 11px;
+
+  background: #fff0f0;
+
+  border: 1px solid #f2cccc;
+  border-radius: 9px;
+
+  color: var(--color-danger);
+
+  font-size: 0.82rem;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+
+  .feed-page {
+    width: min(100% - 24px, 650px);
+
+    padding-top: 24px;
+  }
+
+  .feed-hero {
+    padding: 23px;
+  }
+
+  .feed-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .report-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-description-group {
+    grid-column: auto;
+  }
+
+  .report-submit-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .report-submit-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 520px) {
+
+  .feed-page {
+    width: calc(100% - 18px);
+
+    padding: 18px 0 40px;
+  }
+
+  .feed-hero {
+    gap: 13px;
+
+    padding: 20px 17px;
+
+    border-radius: 16px;
+  }
+
+  .feed-hero-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    font-size: 23px;
+  }
+
+  .feed-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .feed-hero p {
+    font-size: 0.82rem;
+  }
+
+  .feed-create-card,
+  .report-card {
+    padding: 21px 17px;
+
+    border-radius: 15px;
+  }
+
+  .section-heading {
+    gap: 10px;
+  }
+
+  .section-icon,
+  .report-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    font-size: 19px;
+  }
+
+  .section-heading h2,
+  .report-header h2 {
+    font-size: 1.08rem;
+  }
+
+  .form-submit-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-helper {
+    order: 2;
+  }
+
+  .post-submit-btn {
+    width: 100%;
+  }
+
+  .posts-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .community-badge {
+    font-size: 0.7rem;
+  }
+
+  .post-card {
+    border-radius: 15px;
+  }
+
+  .post-card img {
+    max-height: 330px;
+  }
+
+  .post-body {
+    padding: 14px;
+  }
+
+  .comment-input-row {
+    flex-direction: column;
+  }
+
+  .comment-input-row button {
+    width: 100%;
+  }
+
+}

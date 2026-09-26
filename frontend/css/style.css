@@ -1,0 +1,819 @@
+/* =========================================================
+   STRAYCARE GOA — GLOBAL STYLES
+   ========================================================= */
+
+:root {
+  /* Main colors */
+  --color-primary: #36a269;
+  --color-primary-dark: #278052;
+  --color-primary-light: #e8f8ef;
+
+  --color-accent: #ffad4a;
+  --color-accent-light: #fff3df;
+
+  --color-danger: #e05252;
+
+  /* Background */
+  --color-bg: #f5fbf7;
+  --color-card: #ffffff;
+
+  /* Text */
+  --color-text: #26352d;
+  --color-muted: #718078;
+
+  /* Borders */
+  --color-border: #dce9e1;
+
+  /* Design */
+  --radius: 14px;
+  --radius-small: 9px;
+
+  --shadow:
+    0 8px 25px rgba(46, 125, 80, 0.08);
+
+  --shadow-hover:
+    0 12px 32px rgba(46, 125, 80, 0.13);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Segoe UI',
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background: var(--color-bg);
+  color: var(--color-text);
+
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-primary);
+  color: white;
+
+  padding: 14px 24px;
+
+  flex-wrap: wrap;
+  gap: 10px;
+
+  box-shadow: 0 3px 12px rgba(45, 120, 77, 0.12);
+}
+
+.nav-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: #effbf4;
+  padding: 6px 4px;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid white;
+  font-weight: 600;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 0.9rem;
+}
+
+.nav-username {
+  color: #e8f5e9;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: var(--color-primary);
+  color: white;
+
+  border: none;
+
+  padding: 11px 19px;
+
+  border-radius: var(--radius-small);
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px rgba(54, 162, 105, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+}
+
+.btn-accent:hover {
+  background: #ed9635;
+}
+
+.btn-danger {
+  background: var(--color-danger);
+}
+
+.btn-small {
+  background: white;
+  color: var(--color-primary);
+
+  border: 1px solid var(--color-border);
+
+  padding: 6px 12px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 0.85rem;
+
+  transition: 0.2s ease;
+}
+
+.btn-small:hover {
+  background: var(--color-primary-light);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+  background: var(--color-card);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  padding: 20px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid rgba(54, 162, 105, 0.06);
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: 600;
+
+  font-size: 0.88rem;
+
+  color: #35473d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  border: 1px solid #d3e0d8;
+
+  border-radius: var(--radius-small);
+
+  font-size: 0.95rem;
+
+  color: var(--color-text);
+
+  background: #fbfdfc;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #b7cdbf;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px rgba(54, 162, 105, 0.11);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a1ada6;
+}
+
+
+/* =========================================================
+   ERROR / TEXT
+   ========================================================= */
+
+.error-text {
+  color: var(--color-danger);
+
+  font-size: 0.88rem;
+
+  margin-top: 9px;
+
+  padding: 9px 11px;
+
+  border-radius: 8px;
+
+  background: #fff0f0;
+}
+
+.muted {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(28, 45, 35, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+
+  padding: 20px;
+}
+
+.modal-box {
+  background: white;
+
+  border-radius: var(--radius);
+
+  padding: 24px;
+
+  width: 90%;
+  max-width: 420px;
+
+  max-height: 80vh;
+
+  overflow-y: auto;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   HIDDEN
+   ========================================================= */
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   AUTH PAGE
+   ========================================================= */
+
+.auth-wrapper {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(54, 162, 105, 0.10),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(255, 173, 74, 0.12),
+      transparent 30%
+    ),
+    #f5fbf7;
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+   ========================================================= */
+
+.auth-decoration {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 280px;
+  height: 280px;
+
+  top: -150px;
+  left: -100px;
+
+  background: rgba(54, 162, 105, 0.08);
+}
+
+.decoration-two {
+  width: 330px;
+  height: 330px;
+
+  bottom: -190px;
+  right: -120px;
+
+  background: rgba(255, 173, 74, 0.10);
+}
+
+
+/* =========================================================
+   AUTH CARD
+   ========================================================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 470px;
+
+  padding: 36px 38px;
+
+  margin: 0;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(54, 162, 105, 0.10);
+
+  box-shadow:
+    0 20px 55px rgba(41, 92, 61, 0.11);
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 27px;
+}
+
+.brand-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: var(--color-primary-light);
+
+  font-size: 24px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(54, 162, 105, 0.07);
+}
+
+.brand-name {
+  font-size: 1.15rem;
+
+  font-weight: 750;
+
+  color: var(--color-primary);
+
+  line-height: 1.1;
+}
+
+.brand-location {
+  color: var(--color-muted);
+
+  font-size: 0.75rem;
+
+  margin-top: 2px;
+}
+
+
+/* =========================================================
+   AUTH HEADING
+   ========================================================= */
+
+.auth-heading {
+  margin-bottom: 26px;
+}
+
+.auth-heading h1 {
+  margin: 0 0 7px;
+
+  font-size: 1.75rem;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.4px;
+
+  color: #26382f;
+}
+
+.auth-heading p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+   ========================================================= */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 15px;
+
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  padding-left: 39px;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+
+  padding-right: 40px;
+
+  cursor: pointer;
+}
+
+.select-wrapper::after {
+  content: "⌄";
+
+  position: absolute;
+
+  right: 14px;
+  top: 50%;
+
+  transform: translateY(-55%);
+
+  color: var(--color-primary);
+
+  font-size: 18px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PASSWORD HINT
+   ========================================================= */
+
+.password-hint {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #8b9891;
+
+  font-size: 0.76rem;
+}
+
+
+/* =========================================================
+   SIGNUP BUTTON
+   ========================================================= */
+
+.signup-btn {
+  width: 100%;
+
+  margin-top: 4px;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  font-size: 0.97rem;
+
+  background: linear-gradient(
+    135deg,
+    #36a269,
+    #2d9660
+  );
+}
+
+.signup-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #2f925e,
+    #257d4f
+  );
+}
+
+.btn-arrow {
+  font-size: 1.15rem;
+
+  transition: transform 0.2s ease;
+}
+
+.signup-btn:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LOGIN TEXT
+   ========================================================= */
+
+.login-text {
+  text-align: center;
+
+  margin: 22px 0 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.88rem;
+}
+
+.login-text a {
+  color: var(--color-primary);
+
+  font-weight: 700;
+
+  margin-left: 3px;
+
+  transition: color 0.2s ease;
+}
+
+.login-text a:hover {
+  color: var(--color-primary-dark);
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   AUTH FOOTER
+   ========================================================= */
+
+.auth-footer {
+  margin-top: 26px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #edf2ee;
+
+  text-align: center;
+
+  color: #94a099;
+
+  font-size: 0.76rem;
+}
+
+.auth-footer span {
+  margin-right: 4px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .auth-wrapper {
+    padding: 25px 14px;
+  }
+
+  .auth-card {
+    padding: 29px 23px;
+
+    border-radius: 18px;
+  }
+
+  .auth-heading h1 {
+    font-size: 1.55rem;
+  }
+
+  .auth-brand {
+    margin-bottom: 23px;
+  }
+
+  .decoration-one {
+    width: 200px;
+    height: 200px;
+
+    top: -110px;
+    left: -90px;
+  }
+
+  .decoration-two {
+    width: 220px;
+    height: 220px;
+
+    bottom: -130px;
+    right: -100px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .auth-card {
+    padding: 25px 18px;
+  }
+
+  .auth-heading h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  z-index: 50;
+  text-decoration: none;
+}
+.whatsapp-float:hover { background: #1ebe57; 
+}
+
+.status-pending { color: var(--color-accent); font-weight: 600; }
+.status-in-progress { color: #1976d2; font-weight: 600; }
+.status-resolved { color: var(--color-primary); font-weight: 600; }

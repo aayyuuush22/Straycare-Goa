@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Breeding & Sell | StrayCare Goa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/breeding.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-container"></div>
+
+
+  <main class="breeding-page">
+
+    <div class="container">
+
+      <!-- =================================================
+           PAGE HEADER
+           ================================================= -->
+
+      <section class="breeding-header">
+
+        <div class="breeding-header-text">
+
+          <span class="page-eyebrow">
+            🐾 Pet Marketplace
+          </span>
+
+          <h1>Find a new companion</h1>
+
+          <p>
+            List your pet for breeding or sale and connect
+            with responsible pet owners in Goa.
+          </p>
+
+        </div>
+
+        <div class="header-paw">
+          🐶
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           LIST PET CARD
+           ================================================= -->
+
+      <section class="listing-form-card card">
+
+        <div class="section-heading">
+
+          <div class="section-icon">
+            🐾
+          </div>
+
+          <div>
+            <h2>List your pet</h2>
+
+            <p>
+              Share some details about your pet with the community.
+            </p>
+          </div>
+
+        </div>
+
+
+        <form id="listing-form">
+
+          <div class="form-grid">
+
+            <!-- Pet Name -->
+            <div class="form-group">
+              <label for="petName">
+                Pet Name
+              </label>
+
+              <input
+                type="text"
+                id="petName"
+                placeholder="e.g. Bruno"
+                required
+              >
+            </div>
+
+
+            <!-- Species -->
+            <div class="form-group">
+              <label for="species">
+                Species
+              </label>
+
+              <input
+                type="text"
+                id="species"
+                placeholder="Dog, Cat, ..."
+                required
+              >
+            </div>
+
+
+            <!-- Breed -->
+            <div class="form-group">
+              <label for="breed">
+                Breed
+              </label>
+
+              <input
+                type="text"
+                id="breed"
+                placeholder="e.g. Labrador"
+              >
+            </div>
+
+
+            <!-- Age -->
+            <div class="form-group">
+              <label for="age">
+                Age
+              </label>
+
+              <div class="input-with-unit">
+                <input
+                  type="number"
+                  id="age"
+                  min="0"
+                  placeholder="e.g. 2"
+                >
+
+                <span>years</span>
+              </div>
+            </div>
+
+
+            <!-- Purpose -->
+            <div class="form-group">
+              <label for="purpose">
+                Purpose
+              </label>
+
+              <div class="select-wrapper">
+                <select id="purpose">
+                  <option value="breeding">🐾 Breeding</option>
+                  <option value="sell">🏠 Sell</option>
+                </select>
+              </div>
+            </div>
+
+
+            <!-- Contact -->
+            <div class="form-group">
+              <label for="contactInfo">
+                Contact Info
+              </label>
+
+              <input
+                type="text"
+                id="contactInfo"
+                placeholder="Phone or email"
+              >
+            </div>
+
+          </div>
+
+
+          <!-- Photo -->
+          <div class="form-group photo-upload-group">
+
+            <label for="listing-image">
+              Pet Photo
+            </label>
+
+            <label
+              for="listing-image"
+              class="photo-upload"
+            >
+
+              <div class="upload-icon">
+                📷
+              </div>
+
+              <div class="upload-text">
+
+                <strong>
+                  Choose a photo
+                </strong>
+
+                <span>
+                  JPG, PNG or other image formats
+                </span>
+
+              </div>
+
+              <span class="upload-arrow">
+                →
+              </span>
+
+            </label>
+
+            <input
+              type="file"
+              id="listing-image"
+              accept="image/*"
+              class="file-input"
+            >
+
+          </div>
+
+
+          <!-- Description -->
+          <div class="form-group">
+
+            <label for="description">
+              Description
+            </label>
+
+            <textarea
+              id="description"
+              rows="4"
+              placeholder="Tell people a little about your pet, personality, health, temperament, etc."
+            ></textarea>
+
+          </div>
+
+
+          <!-- Submit -->
+          <div class="form-submit">
+
+            <p>
+              🐶 Please provide accurate information about your pet.
+            </p>
+
+            <button
+              type="submit"
+              class="btn post-listing-btn"
+            >
+              Post Listing
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+
+      <!-- =================================================
+           AVAILABLE PETS
+           ================================================= -->
+
+      <section class="available-section">
+
+        <div class="available-header">
+
+          <div>
+
+            <span class="section-label">
+              PET LISTINGS
+            </span>
+
+            <h2>Available Pets</h2>
+
+          </div>
+
+          <div class="pet-count">
+            🐾 Community listings
+          </div>
+
+        </div>
+
+
+        <div
+          id="listings-grid"
+          class="listings-grid"
+        ></div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/breeding.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pet Shop | StrayCare Goa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+
+  <div id="nav-container"></div>
+
+  <main class="shop-page">
+
+    <!-- Shop Header -->
+    <section class="shop-hero">
+
+      <div class="shop-hero-content">
+
+        <div class="shop-hero-icon">🛍️</div>
+
+        <div>
+          <span class="shop-eyebrow">STRAYCARE GOA</span>
+
+          <h1>Pet Shop</h1>
+
+          <p>
+            Everyday essentials for happier and healthier pets.
+          </p>
+        </div>
+
+      </div>
+
+      <button id="view-bill-btn" class="btn bill-button">
+        🧾
+        <span>View Bill</span>
+        <span class="cart-count-badge" id="cart-count">0</span>
+      </button>
+
+    </section>
+
+
+    <!-- Small Info Banner -->
+    <div class="shop-info">
+      <span class="shop-info-icon">🐾</span>
+
+      <div>
+        <strong>Pet essentials, made simple</strong>
+        <p>Choose your items and adjust quantities before checking your bill.</p>
+      </div>
+    </div>
+
+
+    <!-- Products -->
+    <section class="products-section">
+
+      <div class="products-heading">
+        <div>
+          <span class="shop-eyebrow">SHOP COLLECTION</span>
+          <h2>Pet Essentials</h2>
+        </div>
+
+        <span class="products-count-label">🐶 🐱</span>
+      </div>
+
+      <div id="products-grid" class="products-grid"></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Bill Popup -->
+  <div id="bill-modal" class="modal-overlay hidden">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div>
+          <span class="modal-eyebrow">YOUR CART</span>
+          <h2>🧾 Your Bill</h2>
+        </div>
+
+        <div class="modal-paw">🐾</div>
+
+      </div>
+
+
+      <div id="bill-items" class="bill-items"></div>
+
+
+      <div class="bill-divider"></div>
+
+
+      <div class="bill-total-row">
+        <span>Total</span>
+
+        <strong>
+          ₹<span id="bill-total">0</span>
+        </strong>
+      </div>
+
+
+      <div class="modal-actions">
+
+        <button id="pay-btn" class="btn pay-button">
+          💳 Pay Now
+        </button>
+
+        <button id="close-bill-btn" class="btn-small close-button">
+          Close
+        </button>
+
+      </div>
+
+
+      <div class="demo-notice">
+        <span>ℹ️</span>
+
+        <p>
+          This is a demo store — no real payment is processed.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="js/api.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/shop.js"></script>
+
+</body>
+</html>

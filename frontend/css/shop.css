@@ -1,0 +1,816 @@
+/* =========================================================
+   STRAYCARE GOA — PET SHOP
+   Only used by shop.html
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE
+   --------------------------------------------------------- */
+
+.shop-page {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+
+  padding: 34px 0 60px;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.shop-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 22px;
+
+  margin-bottom: 18px;
+  padding: 26px 28px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 173, 74, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #eaf8ef,
+      #f9fcfa
+    );
+
+  border: 1px solid #dceee3;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(39, 128, 82, 0.07);
+}
+
+.shop-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shop-hero-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  border-radius: 17px;
+
+  font-size: 29px;
+
+  box-shadow: 0 6px 18px rgba(39, 128, 82, 0.10);
+}
+
+.shop-eyebrow {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--color-primary-dark);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.shop-hero h1 {
+  margin: 0 0 5px;
+
+  color: var(--color-text);
+
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.shop-hero p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.9rem;
+}
+
+
+/* ---------------------------------------------------------
+   BILL BUTTON
+   --------------------------------------------------------- */
+
+.bill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 44px;
+
+  padding: 9px 14px;
+
+  white-space: nowrap;
+}
+
+.cart-count-badge {
+  min-width: 23px;
+  height: 23px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 6px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: var(--color-primary-dark);
+
+  border-radius: 20px;
+
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   INFO BANNER
+   --------------------------------------------------------- */
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 30px;
+  padding: 13px 16px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 13px;
+
+  box-shadow: 0 5px 17px rgba(38, 53, 45, 0.04);
+}
+
+.shop-info-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: var(--color-primary-light);
+
+  border-radius: 10px;
+
+  font-size: 18px;
+}
+
+.shop-info strong {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: var(--color-text);
+
+  font-size: 0.84rem;
+}
+
+.shop-info p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.77rem;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCTS SECTION
+   --------------------------------------------------------- */
+
+.products-section {
+  margin-top: 8px;
+}
+
+.products-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 17px;
+}
+
+.products-heading h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.4rem;
+}
+
+.products-count-label {
+  padding: 7px 12px;
+
+  background: var(--color-primary-light);
+
+  border: 1px solid #d7eee0;
+  border-radius: 20px;
+
+  font-size: 0.85rem;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT GRID
+   --------------------------------------------------------- */
+
+.products-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT CARD
+   --------------------------------------------------------- */
+
+.product-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 0 0 18px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 17px;
+
+  text-align: center;
+
+  box-shadow: 0 7px 22px rgba(38, 53, 45, 0.055);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c7e2d1;
+
+  box-shadow: 0 13px 28px rgba(38, 53, 45, 0.09);
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT IMAGE
+   --------------------------------------------------------- */
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+
+  display: block;
+
+  object-fit: cover;
+
+  background: #f2f7f4;
+
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT DETAILS
+   --------------------------------------------------------- */
+
+.product-name {
+  margin: 14px 12px 5px;
+
+  color: var(--color-text);
+
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.product-price {
+  margin: 0 0 13px;
+
+  color: var(--color-primary-dark);
+
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   QUANTITY CONTROL
+   --------------------------------------------------------- */
+
+.qty-control {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  margin-top: 4px;
+}
+
+.qty-control button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: var(--color-primary-dark);
+
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.15s ease;
+}
+
+.qty-control button:hover {
+  background: var(--color-primary-light);
+
+  border-color: #afd6bd;
+}
+
+.qty-control button:active {
+  transform: scale(0.93);
+}
+
+.qty-control span {
+  min-width: 24px;
+
+  color: var(--color-text);
+
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   BILL MODAL
+   --------------------------------------------------------- */
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(38, 53, 45, 0.38);
+
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+
+/* ---------------------------------------------------------
+   MODAL BOX
+   --------------------------------------------------------- */
+
+.modal-box {
+  width: min(470px, 100%);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+  border-radius: 19px;
+
+  box-shadow: 0 22px 55px rgba(38, 53, 45, 0.20);
+
+  animation: billModalIn 0.2s ease-out;
+}
+
+@keyframes billModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   MODAL HEADER
+   --------------------------------------------------------- */
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.modal-eyebrow {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--color-primary-dark);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.modal-header h2 {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.3rem;
+}
+
+.modal-paw {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-primary-light);
+
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   BILL ITEMS
+   --------------------------------------------------------- */
+
+.bill-items {
+  min-height: 20px;
+}
+
+.bill-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 8px;
+  padding: 9px 10px;
+
+  background: #f8faf9;
+
+  border-radius: 9px;
+
+  color: var(--color-text);
+
+  font-size: 0.87rem;
+}
+
+.bill-item-row:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   BILL DIVIDER
+   --------------------------------------------------------- */
+
+.bill-divider {
+  height: 1px;
+
+  margin: 17px 0 13px;
+
+  background: var(--color-border);
+}
+
+
+/* ---------------------------------------------------------
+   TOTAL
+   --------------------------------------------------------- */
+
+.bill-total-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 3px 2px 8px;
+}
+
+.bill-total-row span {
+  color: var(--color-muted);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.bill-total-row strong {
+  color: var(--color-primary-dark);
+
+  font-size: 1.25rem;
+}
+
+
+/* Keep original class working too */
+.bill-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   MODAL ACTIONS
+   --------------------------------------------------------- */
+
+.modal-actions {
+  margin-top: 7px;
+}
+
+.pay-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.close-button {
+  width: 100%;
+
+  margin-top: 9px;
+
+  background: #ffffff;
+
+  border-color: var(--color-border);
+
+  color: var(--color-text);
+}
+
+.close-button:hover {
+  background: #f5f8f6;
+}
+
+
+/* ---------------------------------------------------------
+   DEMO NOTICE
+   --------------------------------------------------------- */
+
+.demo-notice {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin-top: 13px;
+  padding: 10px 11px;
+
+  background: #f5f8f6;
+
+  border-radius: 9px;
+}
+
+.demo-notice span {
+  font-size: 14px;
+}
+
+.demo-notice p {
+  margin: 0;
+
+  color: var(--color-muted);
+
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+  .shop-page {
+    width: min(100% - 24px, 650px);
+
+    padding-top: 25px;
+  }
+
+  .shop-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bill-button {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns:
+      repeat(auto-fill, minmax(190px, 1fr));
+
+    gap: 16px;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+  .shop-page {
+    width: calc(100% - 18px);
+
+    padding-top: 18px;
+    padding-bottom: 40px;
+  }
+
+  .shop-hero {
+    padding: 20px 17px;
+
+    border-radius: 16px;
+  }
+
+  .shop-hero-content {
+    gap: 11px;
+  }
+
+  .shop-hero-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    font-size: 23px;
+  }
+
+  .shop-hero h1 {
+    font-size: 1.45rem;
+  }
+
+  .shop-hero p {
+    font-size: 0.8rem;
+  }
+
+  .shop-info {
+    align-items: flex-start;
+
+    padding: 11px 12px;
+  }
+
+  .products-heading {
+    align-items: flex-start;
+  }
+
+  .products-heading h2 {
+    font-size: 1.25rem;
+  }
+
+  .products-count-label {
+    display: none;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .product-card {
+    border-radius: 14px;
+
+    padding-bottom: 14px;
+  }
+
+  .product-card img {
+    height: 145px;
+  }
+
+  .product-name {
+    margin: 11px 8px 4px;
+
+    font-size: 0.88rem;
+  }
+
+  .product-price {
+    margin-bottom: 10px;
+
+    font-size: 0.85rem;
+  }
+
+  .qty-control {
+    gap: 8px;
+  }
+
+  .qty-control button {
+    width: 30px;
+    height: 30px;
+
+    font-size: 1rem;
+  }
+
+  .qty-control span {
+    min-width: 20px;
+
+    font-size: 0.85rem;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-box {
+    padding: 20px;
+
+    border-radius: 16px;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   VERY SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 190px;
+  }
+
+}
