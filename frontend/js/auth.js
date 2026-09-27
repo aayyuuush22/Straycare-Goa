@@ -16,7 +16,7 @@ if (loginForm) {
     errorEl.classList.add('hidden');
 
     try {
-      const data = await apiRequest('/auth/login', 'POST', {
+      const data = await apiRequest('/api/auth/login', 'POST', {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value
       });
@@ -38,7 +38,7 @@ if (signupForm) {
     errorEl.classList.add('hidden');
 
     try {
-      const data = await apiRequest('/auth/register', 'POST', {
+      const data = await apiRequest('/api/auth/register', 'POST', {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,

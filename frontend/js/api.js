@@ -2,7 +2,7 @@
 // This is the ONLY file that knows the backend's URL. If you deploy
 // the backend somewhere else later, you change it in ONE place.
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://straycare-goa.onrender.com';
 
 function getToken() {
   return localStorage.getItem('token');
@@ -60,5 +60,5 @@ async function apiUpload(endpoint, formData) {
 // Turns "/uploads/xyz.jpg" (from the backend) into a full loadable image URL
 function imageUrl(path) {
   if (!path) return '';
-  return `http://localhost:5000${path}`;
+  return `${API_BASE}${path}`;
 }
